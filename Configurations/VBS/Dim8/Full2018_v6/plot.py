@@ -1,6 +1,10 @@
 # plot configuration
 
-
+# groupPlot = {}
+#
+# Groups of samples to improve the plots.
+# If not defined, normal plots is used
+#
 
 # groupPlot = {}
 #
@@ -8,135 +12,48 @@
 # If not defined, normal plots is used
 #
 Red=632; Violet=880; Green=416; Orange=800; Yellow=400; Azure=860
-
-groupPlot['VV']  = {
-                  'nameHR' : "VV",
-                  'isSignal' : 0,
-                  'color'    : Violet+10, # kViolet+10
-                  'samples'  : ['ZZ' , 'WZ' , 'DPS']
-              }
-
-groupPlot['VVV']  = {
-                  'nameHR' : 'VVV',
-                  'isSignal' : 0,
-                  'color': Green, # kGreen
-                  'samples'  : ['VVV']
-              }
-
-
-
-
-groupPlot['Vg']  = {
-                  'nameHR' : "V#gamma",
-                  'isSignal' : 0,
-                  'color'    : Orange+10,   # kOrange + 10
-                  'samples'  : ['Vg']
-              }
-
-groupPlot['WW_strong']  = {
-                  'nameHR' : "WW QCD",
-                  'isSignal' : 0,
-                  'color'    : Violet, # kViolet
-                  'samples'  : ['WW_strong']
-              }
-
-
-
-groupPlot['non-prompt']  = {
-                  'nameHR' : 'non-Prompt',
-                  'isSignal' : 0,
-                  'color': Yellow,    # kYellow
-                  'samples'  : ['Fake_lep']
-              }
-
-
-groupPlot['WW_EWK']  = {
-                  'nameHR' : "WW EWK",
-                  'isSignal' : 0,
-                  'color'    : Azure+4, # kAzure+4
-                  'samples'  : ['WpWp_EWK']
-              }
-
-
-
-
-
+groupPlot['ZZ']  = dict(nameHR="ZZ", isSignal=0, color=ROOT.kMagenta - 10, samples=['ZZ4L','ggZZ'])
+groupPlot['WZ_QCD']  = dict(nameHR="WZ QCD", isSignal=0, color=ROOT.kRed, samples=['WZ_QCD'])
+groupPlot['WZ_EWK']  = dict(nameHR="WZ EWK", isSignal=0, color=ROOT.kMagenta, samples=['WZ_EWK'])
+groupPlot['VVV']  = dict(nameHR='VVV', isSignal=0, color=ROOT.kSpring - 9, samples=['VVV'])
+groupPlot['TVX']  = dict(nameHR='TTV', isSignal=0, color=ROOT.kGray, samples=['TVX'])
+groupPlot['DPS']  = dict(nameHR='DPS', isSignal=0, color=ROOT.kGray + 5, samples=['DPS'])
+groupPlot['Vg']  = dict(nameHR="V#gamma", isSignal=0, color=ROOT.kCyan - 7, samples=['Vg', 'VgS1_H','VgS1_L'])
+groupPlot['WpWp_QCD']  = dict(nameHR="W^{#pm}W^{#pm} QCD", isSignal=0, color=ROOT.kViolet - 4, samples=['WpWp_QCD'])
+groupPlot['non-prompt']  = dict(nameHR='non-Prompt', isSignal=0, color=ROOT.kYellow - 4, samples=['Fake_lep'])
+groupPlot['SSWW']  = dict(nameHR="W^{#pm}W^{#pm} EWK", isSignal=0, color=ROOT.kBlue - 7, samples=['SSWW'])
+#groupPlot['quadratic']  = dict(nameHR="W^{#pm}W^{#pm} EWK bsm", isSignal=0, color=ROOT.kBlue, samples=['quadratic'])
+groupPlot['cW_int']  = dict(nameHR="c_{W}=1 linear", isSignal=2, color=ROOT.kBlue, samples=['cW_int'])
+groupPlot['cW_bsm']  = dict(nameHR="c_{W}=1 quadratic", isSignal=2, color=ROOT.kBlue+4, samples=['cW_bsm'])
 #plot = {}
 
 # keys here must match keys in samples.py
-#
 ##Fake and prompt substraction
-plot['Fake_lep']  = {
-                  'color': Yellow,    # kYellow
-                  'isSignal' : 0,
-                  'isData'   : 0,
-                  'scale'    : 1.0
-              }
+plot['Fake_lep']  = dict(color=Yellow, isSignal=0, isData=0, scale=1.0)
 ##Signal
-plot['WpWp_EWK']  = {
-                  'color': Azure+4, # kAzure+4
-                  'isSignal' : 0,
-                  'isData'   : 0,
-                  'scale'    : 1.0
-                  }
-##Irreducible Background
-plot['WW_strong']  = {
-                  'color': Violet, # kViolet
-                  'isSignal' : 0,
-                  'isData'   : 0,
-                  'scale'    : 1.0
-                  }
-
-
-plot['Vg']  = {
-                  'color': Orange+10, # kOrange+10
-                  'isSignal' : 0,
-                  'isData'   : 0,
-                  'scale'    : 1.0
-                  }
+plot['SSWW']  = dict(color=Azure + 4, isSignal=0, isData=0, scale=1.0) # WpWpJJ_EWK_powheg WpWp_EWK
+plot['cW_int']  = dict(color=Azure + 4, isSignal=2, isData=0, scale=1.0)
+plot['cW_bsm']  = dict(color=Azure + 4, isSignal=2, isData=0, scale=1.0)
+plot['WpWp_QCD']  = dict(color=Violet, isSignal=0, isData=0, scale=1.0)
+#plot['WpWpJJ_QCD']  = dict(color=Violet, isSignal=0, isData=0, scale=1.0)
+plot['Vg']  = dict(color=Orange + 10, isSignal=0, isData=0, scale=1.0)
+plot['VgS1_H']  = dict(color=Orange + 10, isSignal=0, isData=0, scale=1.0) # VgS VgS1 VgS2
+plot['VgS1_L']  = dict(color=Orange + 10, isSignal=0, isData=0, scale=1.0) # VgS VgS1 VgS2
 ##Reducible Background
 ##VV plot
-plot['ZZ']  = {
-                  'color': Violet+10, # kViolet+10
-                  'isSignal' : 0,
-                  'isData'   : 0,
-                  'scale'    : 1.0
-                  }
-
-plot['WZ']  = {
-                  'color': Violet+10, # kViolet+10
-                  'isSignal' : 0,
-                  'isData'   : 0,
-                  'scale'    : 1.0
-                  }
-
-plot['DPS']  = {
-                  'color': Violet+10, # kViolet+10
-                  'isSignal' : 0,
-                  'isData'   : 0,
-                  'scale'    : 1.0
-                  }
+plot['ZZ4L']  = dict(color=Violet + 10, isSignal=0, isData=0, scale=1.0)
+plot['ggZZ']  = dict(color=Violet + 10, isSignal=0, isData=0, scale=1.0)
+plot['WZ_QCD']  = dict(color=Violet + 10, isSignal=0, isData=0, scale=1.0) # WZ_QCD WZ_QCD_powheg WZ_QCD_AMCNLO
+plot['WZ_EWK']  = dict(color=Violet + 10, isSignal=0, isData=0, scale=1.0)
+plot['DPS']  = dict(color=Violet + 10, isSignal=0, isData=0, scale=1.0)
 ##VVV
-plot['VVV']  = {
-                  'color': Green, # kGreen
-                  'isSignal' : 0,
-                  'isData'   : 0,
-                  'scale'    : 1.0
-                  }
-
+plot['VVV']  = dict(color=Green, isSignal=0, isData=0, scale=1.0)
+plot['TVX']  = dict(color=Green + 10, isSignal=0, isData=0, scale=1.0)
 ##Data
-
-plot['DATA']  = {
-                  'nameHR' : 'Data',
-                  'color': 1 ,
-                  'isSignal' : 0,
-                  'isData'   : 1 ,
-                  'isBlind'  : 1 ,
-		  'scale'    : 1.0
-              }
-
+plot['DATA']  = dict(nameHR='Data', color=1, isSignal=0, isData=1, isBlind=0, scale=1.0)
 
 # additional options
-legend['lumi'] = 'L = 59.7/fb'
+legend['lumi'] = 'L = 59.74/fb'
+#legend['lumi'] = 'L = 137.19/fb'
 
 legend['sqrt'] = '#sqrt{s} = 13 TeV'
