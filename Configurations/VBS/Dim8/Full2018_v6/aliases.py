@@ -18,11 +18,11 @@ aliases['softmuon_veto']={
     'expr':'(Sum$(abs(Muon_dxy)<0.02 && abs(Muon_dz)<0.1 && Muon_softId && Muon_pt>5 && abs(Muon_eta)<2.4 && sqrt( pow(Muon_eta - Lepton_eta[0], 2) + pow(abs(abs(Muon_phi - Lepton_phi[0])-pi)-pi, 2) ) >= 0.4 && sqrt( pow(Muon_eta - Lepton_eta[1], 2) + pow(abs(abs(Muon_phi - Lepton_phi[1])-pi)-pi, 2) ) >= 0.4)==0)'
 }
 # chargeflip
-aliases['chargeflip_w'] = {
-    'linesToAdd': ['.L %s/ssww/l2_2018/mischarge_sf.cc+' % configurations],
-    'class': 'misID_sf',
-    'samples': mc,
-}
+#aliases['chargeflip_w'] = {
+    #'linesToAdd': ['.L %s/ssww/l2_2018/mischarge_sf.cc+' % configurations],
+    #'class': 'misID_sf',
+    #'samples': mc,
+#}
 # chargeflip
 # lepton sf
 #eleWP = 'mvaFall17V2Iso_WP90_SS'
@@ -262,10 +262,10 @@ aliases['SFweight'] = {
     #'expr': 'LepWPCut',
     'samples': mc
 }
-aliases['mcCommonWeight_os'] = {
-    'expr': 'SFweight*PromptGenLepMatch2l*chargeflip_w*(Alt$(Lepton_pdgId[0],-9999) * Alt$(Lepton_pdgId[1],-9999) < 0)',#
-    'samples':mc
-}
+#aliases['mcCommonWeight_os'] = {
+    #'expr': 'SFweight*PromptGenLepMatch2l*chargeflip_w*(Alt$(Lepton_pdgId[0],-9999) * Alt$(Lepton_pdgId[1],-9999) < 0)',#
+    #'samples':mc
+#}
 # variations
 aliases['SFweightEleUp'] = {
     'expr': 'LepSF2l__ele_'+eleWP+'__Up',

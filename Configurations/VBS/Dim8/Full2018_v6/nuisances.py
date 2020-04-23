@@ -6,7 +6,7 @@ def nanoGetSampleFiles(inputDir, Sample):
     return getSampleFiles(inputDir, Sample, False, 'nanoLatino_')
 
 try:
-    mc = [skey for skey in samples if skey != 'DATA' and skey!='ll' and skey!='tl' and skey!='tt' and skey!='lt' and not skey.startswith('Fake')]
+    mc = [skey for skey in samples if skey != 'DATA' and skey!='ll' and skey!='tl' and skey!='tt' and skey!='lt' and not skey.startswith('Fake')  and not skey.startswith('cDim8')]
 except NameError:
     mc = []
     cuts = {}
@@ -19,31 +19,31 @@ except NameError:
 #nuisances['lumi'] = {
 #    'name': 'lumi_13TeV_2018',
 #    'type': 'lnN',
-#    'samples': dict((skey, '1.025') for skey in mc if skey not in ['WW', 'top', 'DY'])
+#    'samples': dict((skey, '1.025') for skey in mc if skey not in ['DY'])
 #}
 
 nuisances['lumi_Uncorrelated'] = {
     'name': 'lumi_13TeV_2018',
     'type': 'lnN',
-    'samples': dict((skey, '1.015') for skey in mc if skey not in ['WW', 'top', 'DY'])
+    'samples': dict((skey, '1.015') for skey in mc if skey not in ['DY'])
 }
 
 nuisances['lumi_XYFact'] = {
     'name': 'lumi_13TeV_XYFact',
     'type': 'lnN',
-    'samples': dict((skey, '1.02') for skey in mc if skey not in ['WW', 'top', 'DY'])
+    'samples': dict((skey, '1.02') for skey in mc if skey not in ['DY'])
 }
 
 nuisances['lumi_LScale'] = {
     'name': 'lumi_13TeV_LSCale',
     'type': 'lnN',
-    'samples': dict((skey, '1.002') for skey in mc if skey not in ['WW', 'top', 'DY'])
+    'samples': dict((skey, '1.002') for skey in mc if skey not in ['DY'])
 }
 
 nuisances['lumi_CurrCalib'] = {
     'name': 'lumi_13TeV_CurrCalib',
     'type': 'lnN',
-    'samples': dict((skey, '1.002') for skey in mc if skey not in ['WW', 'top', 'DY'])
+    'samples': dict((skey, '1.002') for skey in mc if skey not in ['DY'])
 }
 
 #### FAKES
@@ -233,7 +233,8 @@ nuisances['stat']  = {
     'includeSignal'  : '1',
     'samples' : {}
 }
-# Differnt type of uncentainties: type->ln N: (modify only event yeld) use a lognorm distributions with sigma = uncertainty. For normalization rateParam
+
+# Different type of uncentainties: type->ln N: (modify only event yeld) use a lognorm distributions with sigma = uncertainty. For normalization rateParam
 # can be used--> use a uniform distribution;
 # Shape: modify not only the events yelds but the event selection too (the shape) will run the varied shapes
 # according to the following two possible kinds
@@ -244,3 +245,7 @@ for n in nuisances.values():
     n['skipCMS'] = 1
 
 print ' '.join(nuis['name'] for nname, nuis in nuisances.iteritems() if nname not in ('lumi', 'stat'))
+
+
+
+

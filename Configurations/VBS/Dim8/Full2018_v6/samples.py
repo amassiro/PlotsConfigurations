@@ -63,12 +63,40 @@ DataTrig = {
 ############  Reducible Bkg  ##############
 ###########################################
 ### Signal
+
 files = nanoGetSampleFiles(mcDirectory, 'WpWpJJ_EWK_madgraph')
 samples['SSWW'] = {
     'name': files,
     'weight': mcCommonWeight,
     'FilesPerJob': 4
 }
+
+
+
+#
+# Dim 8 sample
+#
+
+dim8Sample_directory = '/afs/cern.ch/work/j/jixiao/public/MCl1loose2018v6__MCCorr2018v6__l2loose__l2tightOR2018v6/'
+
+files = nanoGetSampleFiles(dim8Sample_directory, 'WWJJ_SS_WToLNu_EWK_aQGC')
+samples['cDim8_k1_int'] = {
+    'name': files,                 #             1                       -1                            
+    'weight': mcCommonWeight + '* 0.5 * (LHEReweightingWeight[0] - LHEReweightingWeight[1])',
+    'FilesPerJob': 1
+}
+
+samples['cDim8_k1_bsm'] = {
+    'name': files,                 #             1                       -1                            0
+    'weight': mcCommonWeight + '* 0.5 * (LHEReweightingWeight[0] + LHEReweightingWeight[1] - 2*LHEReweightingWeight[2])',
+    'FilesPerJob': 1
+}
+
+
+
+
+
+
 ### eft
 files = nanoGetSampleFiles(mcDirectory, 'cHbox_int')
 samples['cHbox_int'] = {
@@ -421,7 +449,13 @@ addSampleWeight(samples, 'VgS1', 'WGJJ', '(Gen_ZGstar_mass > 0 && Gen_ZGstar_mas
 addSampleWeight(samples, 'VgS1', 'Zg', '(Gen_ZGstar_mass > 0)')
 addSampleWeight(samples, 'VgS1', 'WZTo3LNu_mllmin01', '(Gen_ZGstar_mass > 0.1 && Gen_ZGstar_mass<4)')
 
+#
 ### Wrong-sign
+#
+#  DY not used here -> is it really needed? In particular in emu final state?
+#     a simple mth cut could get rid of it
+#
+
 files = nanoGetSampleFiles(mcDirectory, 'WWTo2L2Nu') + \
         nanoGetSampleFiles(mcDirectory, 'GluGluToWWToENEN') + \
         nanoGetSampleFiles(mcDirectory, 'GluGluToWWToENMN') + \
@@ -431,19 +465,19 @@ files = nanoGetSampleFiles(mcDirectory, 'WWTo2L2Nu') + \
         nanoGetSampleFiles(mcDirectory, 'GluGluToWWToMNTN') + \
         nanoGetSampleFiles(mcDirectory, 'GluGluToWWToTNEN') + \
         nanoGetSampleFiles(mcDirectory, 'GluGluToWWToTNMN') + \
-        nanoGetSampleFiles(mcDirectory, 'GluGluToWWToTNTN')
-samples['WW'] = {
-    'name': files,
-    'weight': 'mcCommonWeight_os',
-    'FilesPerJob': 17,
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'TTTo2L2Nu') + \
+        nanoGetSampleFiles(mcDirectory, 'GluGluToWWToTNTN') + \
+        nanoGetSampleFiles(mcDirectory, 'TTTo2L2Nu') + \
         nanoGetSampleFiles(mcDirectory, 'ST_tW_top_ext1') + \
-        nanoGetSampleFiles(mcDirectory, 'ST_tW_antitop_ext1')
-samples['Top'] = {
+        nanoGetSampleFiles(mcDirectory, 'ST_tW_antitop_ext1') + \
+        nanoGetSampleFiles(mcDirectory, 'GluGluHToWWTo2L2Nu_M125') + \
+        nanoGetSampleFiles(mcDirectory, 'GluGluHToTauTau_M125') + \
+        nanoGetSampleFiles(mcDirectory, 'VBFHToWWTo2L2Nu_M125') + \
+        nanoGetSampleFiles(mcDirectory, 'VBFHToTauTau_M125') + \
+        nanoGetSampleFiles(mcDirectory, 'ttHToNonbb_M125')
+
+samples['WrongSign'] = {
     'name': files,
-    'weight': 'mcCommonWeight_os',
+    'weight': mcCommonWeight,
     'FilesPerJob': 17,
 }
 
@@ -456,30 +490,24 @@ samples['Top'] = {
 # DY1JetsToLL_M-10to50_TuneTuneCP5_13TeV-madgraphMLM-pythia8
 # DY2JetsToLL_M-10to50_TuneTuneCP5_13TeV-madgraphMLM-pythia8
 # DY3JetsToLL_M-10to50_TuneTuneCP5_13TeV-madgraphMLM-pythia8
-ptllDYW_NLO = '(0.87*(gen_ptll<10)+(0.379119+0.099744*gen_ptll-0.00487351*gen_ptll**2+9.19509e-05*gen_ptll**3-6.0212e-07*gen_ptll**4)*(gen_ptll>=10 && gen_ptll<45)+(9.12137e-01+1.11957e-04*gen_ptll-3.15325e-06*gen_ptll**2-4.29708e-09*gen_ptll**3+3.35791e-11*gen_ptll**4)*(gen_ptll>=45 && gen_ptll<200) + 1*(gen_ptll>200))'
-ptllDYW_LO = '((0.632927+0.0456956*gen_ptll-0.00154485*gen_ptll*gen_ptll+2.64397e-05*gen_ptll*gen_ptll*gen_ptll-2.19374e-07*gen_ptll*gen_ptll*gen_ptll*gen_ptll+6.99751e-10*gen_ptll*gen_ptll*gen_ptll*gen_ptll*gen_ptll)*(gen_ptll>0)*(gen_ptll<100)+(1.41713-0.00165342*gen_ptll)*(gen_ptll>=100)*(gen_ptll<300)+1*(gen_ptll>=300))'
-files = nanoGetSampleFiles(mcDirectory, 'DYJetsToLL_M-50_ext2') + \
-        nanoGetSampleFiles(mcDirectory, 'DYJetsToLL_M-10to50-LO_ext1')
-samples['DY'] = {
-    'name': files,
-    'weight': 'mcCommonWeight_os*( !(Sum$(PhotonGen_isPrompt==1 && PhotonGen_pt>15 && abs(PhotonGen_eta)<2.6) > 0 &&\
-        Sum$(LeptonGen_isPrompt==1 && LeptonGen_pt>15)>=2) )',
-    'FilesPerJob': 17,
-}
-# need:
+#ptllDYW_NLO = '(0.87*(gen_ptll<10)+(0.379119+0.099744*gen_ptll-0.00487351*gen_ptll**2+9.19509e-05*gen_ptll**3-6.0212e-07*gen_ptll**4)*(gen_ptll>=10 && gen_ptll<45)+(9.12137e-01+1.11957e-04*gen_ptll-3.15325e-06*gen_ptll**2-4.29708e-09*gen_ptll**3+3.35791e-11*gen_ptll**4)*(gen_ptll>=45 && gen_ptll<200) + 1*(gen_ptll>200))'
+#ptllDYW_LO = '((0.632927+0.0456956*gen_ptll-0.00154485*gen_ptll*gen_ptll+2.64397e-05*gen_ptll*gen_ptll*gen_ptll-2.19374e-07*gen_ptll*gen_ptll*gen_ptll*gen_ptll+6.99751e-10*gen_ptll*gen_ptll*gen_ptll*gen_ptll*gen_ptll)*(gen_ptll>0)*(gen_ptll<100)+(1.41713-0.00165342*gen_ptll)*(gen_ptll>=100)*(gen_ptll<300)+1*(gen_ptll>=300))'
+#files = nanoGetSampleFiles(mcDirectory, 'DYJetsToLL_M-50_ext2') + \
+        #nanoGetSampleFiles(mcDirectory, 'DYJetsToLL_M-10to50-LO_ext1')
+#samples['DY'] = {
+    #'name': files,
+    #'weight': mcCommonWeight + '*( !(Sum$(PhotonGen_isPrompt==1 && PhotonGen_pt>15 && abs(PhotonGen_eta)<2.6) > 0 &&\
+        #Sum$(LeptonGen_isPrompt==1 && LeptonGen_pt>15)>=2) )',
+    #'FilesPerJob': 17,
+#}
+## need:
 # GluGluHToZZTo4L_M125_13TeV_powheg2_JHUGenV714_pythia8
 # # not found: VBFHToZZTo4L_M125_13TeV_powheg2_JHUGenV714_pythia8
 # VHToNonbb_M125_13TeV_amcatnloFXFX_madspin_pythia8
-files = nanoGetSampleFiles(mcDirectory, 'GluGluHToWWTo2L2Nu_M125') + \
-        nanoGetSampleFiles(mcDirectory, 'GluGluHToTauTau_M125') + \
-        nanoGetSampleFiles(mcDirectory, 'VBFHToWWTo2L2Nu_M125') + \
-        nanoGetSampleFiles(mcDirectory, 'VBFHToTauTau_M125') + \
-        nanoGetSampleFiles(mcDirectory, 'ttHToNonbb_M125')
-samples['Higgs'] = {
-    'name': files,
-    'weight': 'mcCommonWeight_os',
-    'FilesPerJob': 17,
-}
+
+
+
+
 # Others
 files = nanoGetSampleFiles(mcDirectory, 'WWTo2L2Nu_DoubleScattering')
 samples['DPS'] = {
@@ -530,4 +558,6 @@ for _, sd in DataRun:
         files = nanoGetSampleFiles('/eos/cms/store/group/phys_higgs/cmshww/amassiro/HWWNano/Run2018_102X_nAODv6_Full2018v6/DATAl1loose2018v6__l2loose__l2tightOR2018v6/', pd + '_' + sd)
         samples['DATA']['name'].extend(files)
         samples['DATA']['weights'].extend([DataTrig[pd]] * len(files))
-        
+      
+      
+      
