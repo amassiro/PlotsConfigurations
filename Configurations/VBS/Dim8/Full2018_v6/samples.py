@@ -77,20 +77,20 @@ samples['SSWW'] = {
 # Dim 8 sample
 #
 
-dim8Sample_directory = '/afs/cern.ch/work/j/jixiao/public/MCl1loose2018v6__MCCorr2018v6__l2loose__l2tightOR2018v6/'
+#dim8Sample_directory = '/afs/cern.ch/work/j/jixiao/public/MCl1loose2018v6__MCCorr2018v6__l2loose__l2tightOR2018v6/'
 
-files = nanoGetSampleFiles(dim8Sample_directory, 'WWJJ_SS_WToLNu_EWK_aQGC')
-samples['cDim8_k1_int'] = {
-    'name': files,                 #             1                       -1                            
-    'weight': mcCommonWeight + '* 0.5 * (LHEReweightingWeight[0] - LHEReweightingWeight[1])',
-    'FilesPerJob': 1
-}
+#files = nanoGetSampleFiles(dim8Sample_directory, 'WWJJ_SS_WToLNu_EWK_aQGC')
+#samples['cDim8_k1_int'] = {
+    #'name': files,                 #             1                       -1                            
+    #'weight': mcCommonWeight + '* 0.5 * (LHEReweightingWeight[0] - LHEReweightingWeight[1])',
+    #'FilesPerJob': 1
+#}
 
-samples['cDim8_k1_bsm'] = {
-    'name': files,                 #             1                       -1                            0
-    'weight': mcCommonWeight + '* 0.5 * (LHEReweightingWeight[0] + LHEReweightingWeight[1] - 2*LHEReweightingWeight[2])',
-    'FilesPerJob': 1
-}
+#samples['cDim8_k1_bsm'] = {
+    #'name': files,                 #             1                       -1                            0
+    #'weight': mcCommonWeight + '* 0.5 * (LHEReweightingWeight[0] + LHEReweightingWeight[1] - 2*LHEReweightingWeight[2])',
+    #'FilesPerJob': 1
+#}
 
 
 

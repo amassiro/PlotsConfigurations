@@ -7,6 +7,17 @@ Test of new model for EFT also for Dim8 operators
     nanoLatino_WWJJ_SS_WToLNu_EWK_aQGC__part0.root
     
 
+1. There are 99 points in reweight_card.dat [1], the unit is 1/Tev^4=10^（-12）/GeV^4
+    http://jixiao.web.cern.ch/jixiao/InputCards/WWjj_SS_dim8_ewk_qcd_reweight_card.dat
+
+
+2. To map each point to the operators, you can find the lhacode for parameters here
+    http://jixiao.web.cern.ch/jixiao/InputCards/parameters.py
+
+3. Weights for aQGC are available in LHEReweightingWeight branch
+
+
+
 
 Create histograms
 ====

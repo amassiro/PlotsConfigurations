@@ -17,7 +17,17 @@ structure['ttbar'] = {
                   'isData'   : 0
                   }
 '''
+
+
 structure['SSWW']       = {'isSignal' : 1, 'isData' : 0}
+
+structure['cHbox_int']  = {  
+                            'isSignal' : 0, 
+                            'isData' : 0 ,
+                            'removeStatUnc' : 1      # remove statistical uncertainty on this sample
+                            }
+
+
 structure['cHbox_int']  = {'isSignal' : 0, 'isData' : 0}
 structure['cHDD_int']   = {'isSignal' : 0, 'isData' : 0}
 structure['cHl1_int']   = {'isSignal' : 0, 'isData' : 0}
