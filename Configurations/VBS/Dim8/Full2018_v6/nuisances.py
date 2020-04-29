@@ -129,17 +129,17 @@ nuisances['eff_e'] = {
     'type': 'shape',
     'samples': dict((skey, ['SFweightEleUp', 'SFweightEleDown']) for skey in mc)
 }
-nuisances['electronpt'] = {
-    'name': 'CMS_scale_e_2018',
-    'kind': 'suffix',
-    'type': 'shape',
-    'mapUp': 'ElepTup',
-    'mapDown': 'ElepTdo',
-    'samples': dict((skey, ['1', '1']) for skey in mc),
-    'folderUp': makeMCDirectory('ElepTup_suffix'),
-    'folderDown': makeMCDirectory('ElepTdo_suffix'),
-    'AsLnN': '1'
-}
+#nuisances['electronpt'] = {
+    #'name': 'CMS_scale_e_2018',
+    #'kind': 'suffix',
+    #'type': 'shape',
+    #'mapUp': 'ElepTup',
+    #'mapDown': 'ElepTdo',
+    #'samples': dict((skey, ['1', '1']) for skey in mc),
+    #'folderUp': makeMCDirectory('ElepTup_suffix'),
+    #'folderDown': makeMCDirectory('ElepTdo_suffix'),
+    #'AsLnN': '1'
+#}
 
 
 ##### Muon Efficiency and energy scale
@@ -151,42 +151,42 @@ nuisances['eff_m'] = {
     'samples': dict((skey, ['SFweightMuUp', 'SFweightMuDown']) for skey in mc)
 }
 
-nuisances['muonpt'] = {
-    'name': 'CMS_scale_m_2018',
-    'kind': 'suffix',
-    'type': 'shape',
-    'mapUp': 'MupTup',
-    'mapDown': 'MupTdo',
-    'samples': dict((skey, ['1', '1']) for skey in mc),
-    'folderUp': makeMCDirectory('MupTup_suffix'),
-    'folderDown': makeMCDirectory('MupTdo_suffix'),
-    'AsLnN': '1'
-}
+#nuisances['muonpt'] = {
+    #'name': 'CMS_scale_m_2018',
+    #'kind': 'suffix',
+    #'type': 'shape',
+    #'mapUp': 'MupTup',
+    #'mapDown': 'MupTdo',
+    #'samples': dict((skey, ['1', '1']) for skey in mc),
+    #'folderUp': makeMCDirectory('MupTup_suffix'),
+    #'folderDown': makeMCDirectory('MupTdo_suffix'),
+    #'AsLnN': '1'
+#}
 ##### Jet energy scale
 
-nuisances['jes'] = {
-    'name': 'CMS_scale_j_2018',
-    'kind': 'suffix',
-    'type': 'shape',
-    'mapUp': 'JESup',
-    'mapDown': 'JESdo',
-    'samples': dict((skey, ['1', '1']) for skey in mc if ((not 'int' in skey) and (not 'bsm' in skey))),
-    'folderUp': makeMCDirectory('JESup_suffix'),
-    'folderDown': makeMCDirectory('JESdo_suffix'),
-    'AsLnN': '1'
-}
+#nuisances['jes'] = {
+    #'name': 'CMS_scale_j_2018',
+    #'kind': 'suffix',
+    #'type': 'shape',
+    #'mapUp': 'JESup',
+    #'mapDown': 'JESdo',
+    #'samples': dict((skey, ['1', '1']) for skey in mc if ((not 'int' in skey) and (not 'bsm' in skey))),
+    #'folderUp': makeMCDirectory('JESup_suffix'),
+    #'folderDown': makeMCDirectory('JESdo_suffix'),
+    #'AsLnN': '1'
+#}
 ##### MET energy scale
 
-nuisances['met'] = {
-    'name': 'CMS_scale_met_2018',
-    'kind': 'suffix',
-    'type': 'shape',
-    'mapUp': 'METup',
-    'mapDown': 'METdo',
-    'samples': dict((skey, ['1', '1']) for skey in mc),
-    'folderUp': makeMCDirectory('METup_suffix'),
-    'folderDown': makeMCDirectory('METdo_suffix'),
-}
+#nuisances['met'] = {
+    #'name': 'CMS_scale_met_2018',
+    #'kind': 'suffix',
+    #'type': 'shape',
+    #'mapUp': 'METup',
+    #'mapDown': 'METdo',
+    #'samples': dict((skey, ['1', '1']) for skey in mc),
+    #'folderUp': makeMCDirectory('METup_suffix'),
+    #'folderDown': makeMCDirectory('METdo_suffix'),
+#}
 ##### Pileup
 
 nuisances['PU'] = {

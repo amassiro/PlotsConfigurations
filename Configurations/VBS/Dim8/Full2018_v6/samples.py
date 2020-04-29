@@ -77,236 +77,58 @@ samples['SSWW'] = {
 # Dim 8 sample
 #
 
-#dim8Sample_directory = '/afs/cern.ch/work/j/jixiao/public/MCl1loose2018v6__MCCorr2018v6__l2loose__l2tightOR2018v6/'
+dim8Sample_directory = '/afs/cern.ch/work/j/jixiao/public/MCl1loose2018v6__MCCorr2018v6__l2loose__l2tightOR2018v6/'
 
-#files = nanoGetSampleFiles(dim8Sample_directory, 'WWJJ_SS_WToLNu_EWK_aQGC')
-#samples['cDim8_k1_int'] = {
-    #'name': files,                 #             1                       -1                            
-    #'weight': mcCommonWeight + '* 0.5 * (LHEReweightingWeight[0] - LHEReweightingWeight[1])',
-    #'FilesPerJob': 1
-#}
-
-#samples['cDim8_k1_bsm'] = {
-    #'name': files,                 #             1                       -1                            0
-    #'weight': mcCommonWeight + '* 0.5 * (LHEReweightingWeight[0] + LHEReweightingWeight[1] - 2*LHEReweightingWeight[2])',
-    #'FilesPerJob': 1
-#}
-
-
-
-
-
-
-### eft
-files = nanoGetSampleFiles(mcDirectory, 'cHbox_int')
-samples['cHbox_int'] = {
-    'name': files,
-    'weight': mcCommonWeight,
+files = nanoGetSampleFiles(dim8Sample_directory, 'WWJJ_SS_WToLNu_EWK_aQGC')
+samples['cDim8_k1_int'] = {
+    'name': files,                 #             1                       -1                            
+    'weight': mcCommonWeight + '* 0.5 * (LHEReweightingWeight[7] - LHEReweightingWeight[3])',
     'FilesPerJob': 1
 }
 
-files = nanoGetSampleFiles(mcDirectory, 'cHDD_int')
-samples['cHDD_int'] = {
-    'name': files,
-    'weight': mcCommonWeight,
+samples['cDim8_k1_bsm'] = {
+    'name': files,                 #             1                       -1                            0
+    'weight': mcCommonWeight + '* 0.5 * (LHEReweightingWeight[7] + LHEReweightingWeight[3] - 2*LHEReweightingWeight[16])',
     'FilesPerJob': 1
 }
 
-#files = nanoGetSampleFiles(mcDirectory, 'cHe_int')
-#samples['cHe_int'] = {
-#    'name': files,
-#    'weight': mcCommonWeight,
-#    'FilesPerJob': 1
-#}
-#
-files = nanoGetSampleFiles(mcDirectory, 'cHl1_int')
-samples['cHl1_int'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-#files = nanoGetSampleFiles(mcDirectory, 'cHl3_int')
-#samples['cHl3_int'] = {
-#    'name': files,
-#    'weight': mcCommonWeight,
-#    'FilesPerJob': 1
-#}
-#
-#files = nanoGetSampleFiles(mcDirectory, 'cHq1_int')
-#samples['cHq1_int'] = {
-#    'name': files,
-#    'weight': mcCommonWeight,
-#    'FilesPerJob': 1
-#}
-#
-files = nanoGetSampleFiles(mcDirectory, 'cHq3_int')
-samples['cHq3_int'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cHWB_int')
-samples['cHWB_int'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cHW_int')
-samples['cHW_int'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cll1_int')
-samples['cll1_int'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cqq11_int')
-samples['cqq11_int'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cqq1_int')
-samples['cqq1_int'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cqq31_int')
-samples['cqq31_int'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cqq3_int')
-samples['cqq3_int'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cW_int')
-samples['cW_int'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cHbox_bsm')
-samples['cHbox_bsm'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cHDD_bsm')
-samples['cHDD_bsm'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-#files = nanoGetSampleFiles(mcDirectory, 'cHe_bsm')
-#samples['cHe_bsm'] = {
-#    'name': files,
-#    'weight': mcCommonWeight,
-#    'FilesPerJob': 1
-#}
-#
-#files = nanoGetSampleFiles(mcDirectory, 'cHl1_bsm')
-#samples['cHl1_bsm'] = {
-#    'name': files,
-#    'weight': mcCommonWeight,
-#    'FilesPerJob': 1
-#}
-#
-#files = nanoGetSampleFiles(mcDirectory, 'cHl3_bsm')
-#samples['cHl3_bsm'] = {
-#    'name': files,
-#    'weight': mcCommonWeight,
-#    'FilesPerJob': 1
-#}
-#
-#files = nanoGetSampleFiles(mcDirectory, 'cHq1_bsm')
-#samples['cHq1_bsm'] = {
-#    'name': files,
-#    'weight': mcCommonWeight,
-#    'FilesPerJob': 1
-#}
-#
-files = nanoGetSampleFiles(mcDirectory, 'cHq3_bsm')
-samples['cHq3_bsm'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cHWB_bsm')
-samples['cHWB_bsm'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cHW_bsm')
-samples['cHW_bsm'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cll1_bsm')
-samples['cll1_bsm'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cqq11_bsm')
-samples['cqq11_bsm'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cqq1_bsm')
-samples['cqq1_bsm'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cqq31_bsm')
-samples['cqq31_bsm'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cqq3_bsm')
-samples['cqq3_bsm'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
-
-files = nanoGetSampleFiles(mcDirectory, 'cW_bsm')
-samples['cW_bsm'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 1
-}
+#        
+#        
+#        From 
+#        
+#        http://jixiao.web.cern.ch/jixiao/InputCards/WWjj_SS_dim8_ewk_qcd_reweight_card.dat
+#        http://jixiao.web.cern.ch/jixiao/InputCards/parameters.py
+#        
+#        
+#        FS0 = Parameter(name = 'FS0',
+#                        nature = 'external',
+#                        type = 'real',
+#                        value = 1.,
+#                        texname = 'f_{\\text{S0}}',
+#                        lhablock = 'ANOINPUTS',
+#                        lhacode = [ 1 ])
+#        
+#        
+#        [3]
+#        
+#        launch
+#                set anoinputs 12 0.000000e+00
+#                set anoinputs 1 -1.000000e-11
+#        
+#        [7]
+#        launch
+#                set anoinputs 12 0.000000e+00
+#                set anoinputs 1 1.000000e-11
+#        
+#        
+#        [16]
+#        launch
+#                set anoinputs 12 0.000000e+00
+#                set anoinputs 2 0.000000e-10
+#        
+#        
+#        
+#        
 
 files = nanoGetSampleFiles(mcDirectory, 'WLLJJ_WToLNu_EWK')
 samples['WZ_EWK'] = {
