@@ -96,6 +96,102 @@ Resubmit if needed:
     
     
     
+    
+    
+    
+    
+    
+    
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__DATA.13.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__DATA.23.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__DATA.24.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__Fake_lep.1.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__Fake_lep.13.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__Fake_lep.23.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__Fake_lep.24.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__Fake_lep.27.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__TVX.2.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__TVX.6.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__TVX.8.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__Vg.0.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__VgS1.1.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WZ_EWK.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WZ_QCD.1.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WrongSign.0.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WrongSign.1.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WrongSign.2.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WrongSign.3.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WrongSign.4.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__ZZ4L.13.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__ZZ4L.15.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__ZZ4L.16.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__ZZ4L.5.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__ZZ4L.9.jds
+
+
+
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_ZZ4L.9.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_ZZ4L.13.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_ZZ4L.15.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_ZZ4L.16.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_TVX.2.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_TVX.6.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_TVX.8.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_Vg.0.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_WrongSign.1.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_WrongSign.2.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_WrongSign.3.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_WrongSign.4.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_Fake_lep.1.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_Fake_lep.23.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_Fake_lep.24.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_DATA.13.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_DATA.23.root
+--> Missing root file: plots_VBS_SS_l2_2018_ALL_DATA.24.root
+
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__DATA.13.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__DATA.23.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__DATA.24.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__Fake_lep.1.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__Fake_lep.23.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__Fake_lep.24.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__TVX.2.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__TVX.6.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__TVX.8.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__Vg.0.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WrongSign.1.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WrongSign.2.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WrongSign.3.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WrongSign.4.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__ZZ4L.13.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__ZZ4L.15.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__ZZ4L.16.jds
+    sed -i 's/espresso/workday/g'   /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__ZZ4L.9.jds
+
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__DATA.13.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__DATA.23.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__DATA.24.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__Fake_lep.1.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__Fake_lep.23.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__Fake_lep.24.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__TVX.2.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__TVX.6.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__TVX.8.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__Vg.0.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WrongSign.1.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WrongSign.2.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WrongSign.3.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__WrongSign.4.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__ZZ4L.13.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__ZZ4L.15.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__ZZ4L.16.jds
+    condor_submit  /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/Postprocessing/jobs/mkShapes__VBS_SS_l2_2018/mkShapes__VBS_SS_l2_2018__ALL__ZZ4L.9.jds
+
+    
+    
+    
+    
+    
 Plots
 ====
 
@@ -113,8 +209,23 @@ Datacard
 Make datacard:
 
 
-    mkDatacards.py --pycfg=configuration.py --inputFile=rootFile/plots_ggH.root
+    mkDatacards.py --pycfg=configuration.py --inputFile=rootFile_l2_2018/plots_VBS_SS_l2_2018.root
 
 
-        
+
+    
+EFT fit
+====
+
+
+    text2workspace.py     datacards_l2_2018/ssww_leppt0_jetpt30/pt1/datacard.txt -P HiggsAnalysis.AnalyticAnomalousCoupling.AnomalousCouplingEFT:analiticAnomalousCouplingEFT   -o   model_test.root   
+    
+    combine -M MultiDimFit model_test.root  --algo=grid --points 240  -m 125   -t -1 --expectSignal=1     \
+        --freezeAllParameters \
+        --redefineSignalPOIs cDim8_k1 \
+        --setParameters r=1    --setParameterRanges k_cDim8_k1=-10,10     \
+        --verbose -1
+    
+    
+    
 

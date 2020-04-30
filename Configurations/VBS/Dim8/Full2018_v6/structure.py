@@ -22,11 +22,21 @@ structure['ttbar'] = {
 structure['SSWW']       = {'isSignal' : 1, 'isData' : 0}
 
 structure['cHbox_int']  = {  
-                            'isSignal' : 0, 
+                            'isSignal' : 1, 
                             'isData' : 0 ,
                             'removeStatUnc' : 1      # remove statistical uncertainty on this sample
                             }
 
+structure['cDim8_k1_int']  = {  
+                            'isSignal' : 1, 
+                            'isData' : 0 ,
+                            'removeStatUnc' : 1      # remove statistical uncertainty on this sample
+                            }
+structure['cDim8_k1_bsm']  = {  
+                            'isSignal' : 1, 
+                            'isData' : 0 ,
+                            'removeStatUnc' : 1      # remove statistical uncertainty on this sample
+                            }
 
 structure['cHbox_int']  = {'isSignal' : 0, 'isData' : 0}
 structure['cHDD_int']   = {'isSignal' : 0, 'isData' : 0}
@@ -61,7 +71,7 @@ structure['WpWp_QCD']   = {'isSignal' : 0, 'isData' : 0}
 structure['WZ_QCD']     = {'isSignal' : 0, 'isData' : 0}
 #structure['WZ_QCD_powheg']  = {'isSignal' : 0, 'isData' : 0}
 #structure['WZ_QCD_AMCNLO']  = {'isSignal' : 0, 'isData' : 0}
-#structure['WZ_QCD_mllmin01']  = {'isSignal' : 0, 'isData' : 0}
+structure['WZ_QCD_mllmin01']  = {'isSignal' : 0, 'isData' : 0}
 structure['ZZ4L']       = {'isSignal' : 0, 'isData' : 0}
 structure['ggZZ']       = {'isSignal' : 0, 'isData' : 0}
 structure['TVX']        = {'isSignal' : 0, 'isData' : 0}

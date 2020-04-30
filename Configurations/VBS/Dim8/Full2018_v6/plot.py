@@ -23,11 +23,27 @@ groupPlot['WpWp_QCD']    = dict(nameHR="W^{#pm}W^{#pm} QCD", isSignal=0, color=R
 groupPlot['non-prompt']  = dict(nameHR='non-Prompt', isSignal=0, color=ROOT.kYellow - 4, samples=['Fake_lep'])
 groupPlot['SSWW']        = dict(nameHR="W^{#pm}W^{#pm} EWK", isSignal=1, color=ROOT.kBlue - 7, samples=['SSWW'])
 #groupPlot['quadratic']  = dict(nameHR="W^{#pm}W^{#pm} EWK bsm", isSignal=0, color=ROOT.kBlue, samples=['quadratic'])
-groupPlot['cW_int']      = dict(nameHR="c_{W}=1 linear", isSignal=2, color=ROOT.kBlue, samples=['cW_int'])
-groupPlot['cW_bsm']      = dict(nameHR="c_{W}=1 quadratic", isSignal=2, color=ROOT.kBlue+4, samples=['cW_bsm'])
+#groupPlot['cW_int']      = dict(nameHR="c_{W}=1 linear", isSignal=2, color=ROOT.kBlue, samples=['cW_int'])
+#groupPlot['cW_bsm']      = dict(nameHR="c_{W}=1 quadratic", isSignal=2, color=ROOT.kBlue+4, samples=['cW_bsm'])
 #plot = {}
 
+groupPlot['cDim8_S0_int']      = dict(
+                                       nameHR="c_{S0}=1 linear",
+                                       isSignal=2, 
+                                       color=ROOT.kBlue, 
+                                       samples=['cDim8_k1_int']
+                                       )
 
+groupPlot['cDim8_S0_bsm']      = dict(
+                                       nameHR="c_{S0}=1 quadratic", 
+                                       isSignal=2, 
+                                       color=ROOT.kBlue+4, 
+                                       samples=['cDim8_k1_bsm']
+                                       )
+
+
+         
+         
 
 
 
@@ -38,8 +54,11 @@ groupPlot['cW_bsm']      = dict(nameHR="c_{W}=1 quadratic", isSignal=2, color=RO
 plot['Fake_lep']  = dict(color=Yellow, isSignal=0, isData=0, scale=1.0)
 ##Signal
 plot['SSWW']  = dict(color=Azure + 4, isSignal=1, isData=0, scale=1.0) # WpWpJJ_EWK_powheg WpWp_EWK
-plot['cW_int']  = dict(color=Azure + 4, isSignal=2, isData=0, scale=1.0)
-plot['cW_bsm']  = dict(color=Azure + 4, isSignal=2, isData=0, scale=1.0)
+plot['cDim8_k1_int']  = dict(color=Azure + 4, isSignal=2, isData=0, scale=1.0)
+plot['cDim8_k1_bsm']  = dict(color=Azure + 4, isSignal=2, isData=0, scale=1.0)
+
+#plot['cW_int']  = dict(color=Azure + 4, isSignal=2, isData=0, scale=1.0)
+#plot['cW_bsm']  = dict(color=Azure + 4, isSignal=2, isData=0, scale=1.0)
 plot['WpWp_QCD']  = dict(color=Violet, isSignal=0, isData=0, scale=1.0)
 #plot['WpWpJJ_QCD']  = dict(color=Violet, isSignal=0, isData=0, scale=1.0)
 plot['Vg']  = dict(color=Orange + 10, isSignal=0, isData=0, scale=1.0)

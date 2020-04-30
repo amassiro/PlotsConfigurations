@@ -164,33 +164,33 @@ samples['WpWp_QCD'] = {
 }
 
 ### WZ QCD
-files = nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-50_QCD_0Jet') + \
-        nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-50_QCD_1Jet') + \
-        nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-50_QCD_2Jet') + \
-        nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-50_QCD_3Jet') + \
-        nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-4To50_QCD_0Jet') + \
-        nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-4To50_QCD_1Jet') + \
-        nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-4To50_QCD_2Jet') + \
-        nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-4To50_QCD_3Jet')
-samples['WZ_QCD'] = {
-    'name': files,
-    'weight': mcCommonWeight+'*1.2',
-    'FilesPerJob': 4
-}
+#files = nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-50_QCD_0Jet') + \
+        #nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-50_QCD_1Jet') + \
+        #nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-50_QCD_2Jet') + \
+        #nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-50_QCD_3Jet') + \
+        #nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-4To50_QCD_0Jet') + \
+        #nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-4To50_QCD_1Jet') + \
+        #nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-4To50_QCD_2Jet') + \
+        #nanoGetSampleFiles(mcDirectory, 'WLLJJToLNu_M-4To50_QCD_3Jet')
+#samples['WZ_QCD'] = {
+    #'name': files,
+    #'weight': mcCommonWeight+'*1.2',
+    #'FilesPerJob': 4
+#}
 
-files = nanoGetSampleFiles(mcDirectory, 'WZTo3LNu_powheg')
-samples['WZ_QCD_powheg'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 4
-}
+#files = nanoGetSampleFiles(mcDirectory, 'WZTo3LNu_powheg')
+#samples['WZ_QCD_powheg'] = {
+    #'name': files,
+    #'weight': mcCommonWeight,
+    #'FilesPerJob': 4
+#}
 
-files = nanoGetSampleFiles(mcDirectory, 'WZTo3LNu_ext1')
-samples['WZ_QCD_AMCNLO'] = {
-    'name': files,
-    'weight': mcCommonWeight,
-    'FilesPerJob': 4
-}
+#files = nanoGetSampleFiles(mcDirectory, 'WZTo3LNu_ext1')
+#samples['WZ_QCD_AMCNLO'] = {
+    #'name': files,
+    #'weight': mcCommonWeight,
+    #'FilesPerJob': 4
+#}
 
 files = nanoGetSampleFiles(mcDirectory, 'WZTo3LNu_mllmin01')
 samples['WZ_QCD_mllmin01'] = {
