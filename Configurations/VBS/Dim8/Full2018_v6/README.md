@@ -217,14 +217,30 @@ Make datacard:
 EFT fit
 ====
 
+    cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/AnalyticAnomalousCoupling/CMSSW_10_2_13/src/HiggsAnalysis/AnalyticAnomalousCoupling
+    cmsenv
+    cd -
+    
 
-    text2workspace.py     datacards_l2_2018/ssww_leppt0_jetpt30/pt1/datacard.txt -P HiggsAnalysis.AnalyticAnomalousCoupling.AnomalousCouplingEFT:analiticAnomalousCouplingEFT   -o   model_test.root   
+    text2workspace.py     datacards_l2_2018/ssww_leppt0_jetpt30/pt1/datacard.txt    -P HiggsAnalysis.AnalyticAnomalousCoupling.AnomalousCouplingEFT:analiticAnomalousCouplingEFT   -o   model_test.root   
     
     combine -M MultiDimFit model_test.root  --algo=grid --points 240  -m 125   -t -1 --expectSignal=1     \
-        --freezeAllParameters \
-        --redefineSignalPOIs cDim8_k1 \
-        --setParameters r=1    --setParameterRanges k_cDim8_k1=-10,10     \
+        --redefineSignalPOIs k_cDim8_k1 \
+        --setParameters r=1,k_cDim8_k1=0  \
+        --freezeParameters r   \
+        --setParameterRanges k_cDim8_k1=-10,10     \
         --verbose -1
+    
+    
+    cd /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/AnalyticAnomalousCoupling/CMSSW_10_2_13/src/HiggsAnalysis/AnalyticAnomalousCoupling/test/
+    
+    r99t /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/TestValsecchi/CMSSW_10_2_15_patch2/src/PlotsConfigurations/Configurations/VBS/Dim8/Full2018_v6/higgsCombineTest.MultiDimFit.mH125.root \
+         /afs/cern.ch/user/a/amassiro/work/Latinos/Framework/TestValsecchi/CMSSW_10_2_15_patch2/src/PlotsConfigurations/Configurations/VBS/Dim8/Full2018_v6/higgsCombineTest.MultiDimFit.mH125.root \
+         draw.cxx\(\"k_cDim8_k1\"\)
+
+         
+         
+    
     
     
     
